@@ -1,4 +1,4 @@
-import { Application } from "stimulus"
+import { Application } from "@hotwired/stimulus"
 import MaskController from "../src/controllers/mask_controller"
 
 document.body.innerHTML = `
