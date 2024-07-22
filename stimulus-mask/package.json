@@ -1,0 +1,34 @@
+{
+  "name": "stimulus-mask",
+  "version": "1.0.0",
+  "description": "Stimulus controller for dynamic input masking with digit and character recognition",
+  "main": "src/controllers/mask_controller.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodrigotoledo/stimulus-mask.git"
+  },
+  "keywords": [
+    "stimulus",
+    "mask",
+    "input",
+    "dynamic",
+    "format"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "stimulus": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/dom": "^8.5.0",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/user-event": "^12.1.10",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  }
+}
