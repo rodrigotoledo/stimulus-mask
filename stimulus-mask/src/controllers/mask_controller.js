@@ -1,13 +1,17 @@
-import { Controller } from "stimulus"
+import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-
   mask(event) {
     const input = event.target;
     const maskFormat = input.getAttribute("data-mask-format");
     if (!maskFormat) return;
 
     let value = input.value.replace(/\\/g, '');
+
+    if (event.inputType === 'deleteContentBackward') {
+      value = value.slice(0, -1);
+    }
+
     let formattedValue = "";
     let valueIndex = 0;
 
