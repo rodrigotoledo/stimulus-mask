@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _stimulus = require("@hotwired/stimulus");
+var _maskUtils = require("../maskUtils");
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
@@ -30,40 +31,11 @@ var _default = exports["default"] = /*#__PURE__*/function (_Controller) {
       var input = event.target;
       var maskFormat = input.getAttribute("data-mask-format");
       if (!maskFormat) return;
-      var value = input.value.replace(/\\/g, '');
+      var value = input.value;
       if (event.inputType === 'deleteContentBackward') {
         value = value.slice(0, -1);
       }
-      var formattedValue = "";
-      var valueIndex = 0;
-      for (var i = 0; i < maskFormat.length; i++) {
-        if (maskFormat[i] === "9") {
-          if (valueIndex < value.length && /[0-9]/.test(value[valueIndex])) {
-            formattedValue += value[valueIndex];
-            valueIndex++;
-          } else {
-            break;
-          }
-        } else if (maskFormat[i] === "#") {
-          if (valueIndex < value.length) {
-            formattedValue += value[valueIndex];
-            valueIndex++;
-          } else {
-            break;
-          }
-        } else if (maskFormat[i] === "\\") {
-          i++;
-          if (i < maskFormat.length) {
-            formattedValue += maskFormat[i];
-          }
-        } else {
-          formattedValue += maskFormat[i];
-          if (value[valueIndex] === maskFormat[i]) {
-            valueIndex++;
-          }
-        }
-      }
-      input.value = formattedValue;
+      input.value = (0, _maskUtils.applyMask)(value, maskFormat);
     }
   }]);
 }(_stimulus.Controller);
