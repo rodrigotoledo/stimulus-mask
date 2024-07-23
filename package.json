@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodrigotoledo/stimulus-mask.git"
+    "url": "git+https://github.com/rodrigotoledo/stimulus-mask.git"
   },
   "keywords": [
     "stimulus",
