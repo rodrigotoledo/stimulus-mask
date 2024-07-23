@@ -46,9 +46,24 @@ npm test
 ```
 
 ## Repository
+
 Find the repository on GitHub:
 
 https://github.com/rodrigotoledo/stimulus-mask
+
+## Demo applications
+
+Ruby on rails application demo:
+
+https://github.com/rodrigotoledo/stimulus_mask_rails_demo
+
+React application demo:
+
+https://github.com/rodrigotoledo/stimulus_mask_react_demo
+
+React Native application demo:
+
+https://github.com/rodrigotoledo/stimulus_mask_react_native_demo
 
 ### Keywords
 
