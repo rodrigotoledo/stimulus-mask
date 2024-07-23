@@ -1,6 +1,6 @@
 {
   "name": "stimulus-mask",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stimulus controller for dynamic input masking with digit and character recognition",
   "main": "src/controllers/mask_controller.js",
   "scripts": {
